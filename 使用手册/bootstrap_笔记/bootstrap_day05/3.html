@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    body {
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+  </style>
+</head>
+<body>
+<h1>Bootstrap组件——导航栏</h1>
+
+<div class="navbar navbar-default">
+  <div class="container">
+    <!--导航栏的头部-->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TARENA</a>
+    </div>
+    <!--导航栏中的菜单-->
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li>
+        <a href="#" data-toggle="dropdown">Products<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Web Front</a></li>
+          <li><a href="#">Java Big Data</a></li>
+          <li><a href="#">Android</a></li>
+          <li><a href="#">PHP</a></li>
+          <li><a href="#">Linux & Network</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    <form class="navbar-form navbar-right">
+      <div class="form-group">
+        <label for="kw" class="sr-only">搜索关键字</label>
+        <div class="input-group">
+          <input class="form-control" id="kw" placeholder="input search keyworkd...">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <a class="btn btn-danger navbar-btn" href="#">REGISTER</a>
+    <a class="btn btn-success navbar-btn" href="#">LOGIN</a>
+    <a class="navbar-link" href="#">LOGIN</a>
+    <!--<span class="navbar-text">Hello</span>
+    <button ty class="btn btn-default btn-xs navbar-btn">关闭</button>-->
+  </div>
+</div>
+<div class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">TARENA</a>
+    </div>
+    <!--导航栏中的菜单-->
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    <form class="navbar-form navbar-right">
+      <div class="form-group has-feedback">
+        <label for="kw2" class="sr-only"></label>
+        <input class="form-control" id="kw2" placeholder="keywords....">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">
+        <img src="img/logo.png" style="margin-top:-14px">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+      <img src="img/logo.png" style="margin-top:-16px">
+    </a>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+copyright®
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  //添加Bootlint，检查Bootstrap使用方面存在的问题
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s);
+  })();
+</script>
+</body>
+</html>

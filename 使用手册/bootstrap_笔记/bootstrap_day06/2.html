@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Bootstrap提供的jQuery插件——模态对话框</h1>
+  <button class="btn btn-success" type="button" data-toggle="modal" data-target="#licenseModal">
+    显示当前网站的使用许可——使用data-*触发模态框
+  </button>
+  <br>
+  <a class="btn btn-danger" data-toggle="modal" href="#loginModal">登录——使用超链接触发模态框</a>
+  <br>
+  <button class="btn btn-info" id="btRegister" type="button">注册——使用JS触发模态框</button>
+
+  <div class="modal" id="licenseModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3>版权许可对话框的主体内容</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda aut ex facere fugiat ipsum
+            mollitia nobis perferendis repellat vel. Alias cumque doloremque error et incidunt neque nisi soluta
+            tempora! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur atque ducimus, fuga id ipsa
+            libero minima nemo nobis placeat repudiandae sunt temporibus ut! Animi assumenda eaque iste quia
+            reiciendis?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>用户登录</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="uname">用户名：</label>
+              <input class="form-control" id="uname">
+            </div>
+            <div class="form-group">
+              <label for="upwd">密码名：</label>
+              <input class="form-control" id="upwd">
+            </div>
+            <a href="#" class="btn btn-success">确定登录</a>
+            <a href="#" class="btn btn-danger">取消登录</a>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-success">确定登录</a>
+          <a href="#" class="btn btn-danger">取消登录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>注册新用户</h3>
+        </div>
+        <div class="modal-body">
+          注册新用户-主体内容
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal2">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>注册新用户</h3>
+        </div>
+        <div class="modal-body">
+          注册新用户-主体内容
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal3">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3>注册新用户</h3>
+        </div>
+        <div class="modal-body">
+          注册新用户-主体内容
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  //添加Bootlint，检查Bootstrap使用方面存在的问题
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s);
+  })();
+</script>
+<script>
+  $('#btRegister').click(function(){
+    //使用JS方式触发模态框的显示
+    $('#registerModal3').modal();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>BOM: window对象打开模态对话框</h1>
+  <button id="bt1">打开非模态对话框</button><br>
+  <button id="bt2">打开模态对话框</button>
+
+  <script>
+    document.querySelector('#bt1').onclick=function(){
+      //打开非模态对话框   modalesse dialog
+      window.open('child.html','myChild1','');
+    }
+    document.querySelector('#bt2').onclick=function(){
+      //打开非模态对话框   modal dialog
+      window.showModalDialog('child.html',{},'');
+    }
+  </script>
+</body>
+</html>

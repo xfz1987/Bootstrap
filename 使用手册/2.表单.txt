@@ -1,0 +1,38 @@
+* form 增加属性 role="form"
+  <form role="form">
+
+* 处理input、select、textarea等表单元素时 加上 .group
+
+  .form-group     用于input和label的共同父元素
+  .form-group-lg  大号的输入框
+  .form-group-sm  小号的输入框
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">邮箱：</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+  </div>
+  .group-control{
+    1.宽度变成了100%
+    2.设置了一个浅灰色（#ccc）的边框
+    3.具有4px的圆角
+    4.设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
+    5.设置了placeholder的颜色为#999
+    6.margin-bottom: 15px;
+  }
+
+* 水平表单
+  给form增加 form-horizontal类
+  <form class="form-horizontal" role="form">
+
+* radio、checkbox
+  <div class="checkbox">
+      <label>
+          <input type="checkbox"> 请打勾
+      </label>
+   </div>
+
+   .checkbox      用于<input type="checkbox">的父容器(div)上！对其中的label文字作了设定
+   .checkbox-inline
+   .radio         用于<input type="radio">的父容器(div)上！对其中的label文字作了设定
+   .radio-inline
+   .form-inline       用于form元素，实现输入域处于一行内

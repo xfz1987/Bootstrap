@@ -1,0 +1,113 @@
+【名词解释】
+ lg         large        >1200的屏幕（大型PC显示器）
+ md（默认） medium       >992的屏幕(普通PC显示器)
+ sm         small        >768的屏幕(平板)
+ xs         extra-small  <768的屏幕(手机)
+
+
+【标题】
+  * 重新设置了margin-top和margin-bottom的值，h1~h3重置后的值都是20px；h4~h6重置后的值都是10px。
+  * 所有标题的行高都是1.1（也就是font-size的1.1倍）,而且文本颜色和字体都继承父元素的颜色和字体。
+  * 固定不同级别标题字体大小，h1=36px，h2=30px，h3=24px，h4=18px，h5=14px和h6=12px。
+
+【副标题】
+  * 副标题:<h1>Bootstrap标题一<small>我是副标题</small></h1>
+  * 行高都是1，而且font-weight设置了normal变成了常规效果（不加粗），同时颜色被设置为灰色（#999）。
+  * 由于<small>内的文本字体在h1~h3内，其大小都设置为当前字号的65%；而在h4~h6内的字号都设置为当前字号的75%；
+
+【正文】
+  * font-size:14px, line-height:大约是20px, color:#333, font-family:"Helvetica Neue", Helvetica, Arial, sans-serif,
+  * p{margin: 0 0 10px;}
+  * 强调: .lead{margin-bottom:20px;font-size:16px;font-weight:200;line-height:1.4;}
+          .text-muted    提示，使用浅灰色（#999）
+          .text-primary  主要，使用蓝色（#428bca）
+          .text-success  成功，使用浅绿色(#3c763d)
+          .text-info     通知信息，使用浅蓝色（#31708f）
+          .text-warning  警告，使用黄色（#8a6d3b）
+          .text-danger   危险，使用褐色（#a94442）
+
+【对齐】
+  .text-left    左对齐
+  .text-center  居中对齐
+  .text-right   右对齐
+  .text-justify 两端对齐
+
+【英文字母大小写】
+  .text-lowercase  文本中每个单词都小写
+  .text-uppercase  文本中每个单词都大写
+  .text-capitalize 文本中每个单词首字母大写
+
+【背景】
+  .bg-primary  主要，使用蓝色（#428bca）
+  .bg-success  成功，使用浅绿色(#3c763d）
+  .bg-info     通知信息，使用浅蓝色（31708f）
+  .bg-warning  警告，使用黄色（#8a6d3b）
+  .bg-danger   危险，使用褐色（#a94442）
+
+【图片】
+  .img-responsive:  响应式图片max-width:100%; display:block;
+  -------------------------------------
+  .img-circle:      图片显示为圆形
+  .img-rounded:     圆角图片
+  .img-thumnail:    缩略图片（添加一些内边距（padding）和一个灰色的边框）
+
+【图标】
+  1.下载font字体库
+  2. 在任何内联元素上应用所对应的样式即可
+     <span class="glyphicon glyphicon-search"></span>
+  3.通过设置font-size，color，可以更改图标的大小和颜色
+
+【列表】
+  * 内联列表：把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示
+    <ul class="list-inline"><li>1</li><li>2</li></ul>
+    ------------------------------------------------------------
+    .list-inline{padding-left:0;margin-left:-5px;list-style:none;}
+    .list-inline>li{display:inline-block;padding-right:5px;padding-left:5px;}
+
+  * 定义列表: 只是调整了行间距，外边距和字体加粗
+    dl{margin-top:0;margin-bottom:20px;}
+    dt,dd{line-height:1.42857143;}
+    dt{font-weight:bold;}
+    dd{margin-left:0;}
+
+  * 水平定义列表
+    <dl class="dl-horizontal"></dl>.dl-horizontal
+    -------------------------------------------------
+    1、将dt设置了一个左浮动，并且设置了一个宽度为160px
+    2、将dd设置一个margin-left的值为180px，达到水平的效果
+    3、当dt宽度超过160px时，将会显示三个省略号
+
+【表格】
+ 注意：无论怎么使用表格，基础表格的类 .table 一定要加上
+
+ * .table            基础表格
+     <table class="table">
+     ----------------------------------------------
+     给表格设置了margin-bottom:20px以及设置单元内距
+     在thead底部设置了一个2px的浅灰实线
+     每个单元格顶部设置了一个1px的浅灰实线
+
+ * .table-striped    斑马线表格
+    <table class="table table-striped">
+    -----------------------------------------------
+    tbody隔行有一个浅灰色的背景色
+
+ * .table-bordered   带边框的表格
+   <table class="table table-bordered">
+
+ * .table-hover      鼠标悬停高亮的表格
+   <table class="table table-hover">
+   ----------------------------------------------------------------------------
+   .table-hover > tbody > tr:hover > td,.table-hover > tbody > tr:hover > th {background-color: #f5f5f5;}
+
+ * .table-condensed  紧凑型表格
+   <table class="table table-condensed">
+   ------------------------------------------------------------
+   单元格没内距或者内距较其他表格的内距更小
+
+ * .table-responsive 响应式表格
+   <div class="table-responsive">
+      <table class="table table-bordered"></table>
+   <div>
+
+

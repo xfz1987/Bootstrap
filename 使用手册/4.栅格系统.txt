@@ -1,0 +1,109 @@
+* .container
+  使用媒体查询，在不同的屏幕宽度下，设置了不同的固定宽度和水平居中，
+  并使用:after内容生成了清除浮动影响的空格(display:table)，
+  以及:before内容生成了一个防止子元素布局陷阱的空格(display:table);
+  .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+
+* .container-fluid
+  宽度为父容器的100%，
+  并使用:after内容生成了清除浮动影响的空格(display:table)，
+  以及:before内容生成了一个防止子元素布局陷阱的空格(display:table)
+
+* .container 与 .container-fluid的区别
+  .container左右有15px的padding，而container-fluid没有
+
+* Bootstrap网格系统就是将容器的一行平分成12份
+  无论是 xs  sm  md lg中的哪一个，每一个格子的左右padding:15px;
+
+  .row{margin-right: -15px;margin-left: -15px;}
+   <div class="container/container-fluid">
+       <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+       </div>
+       <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+       </div>
+   </div>
+
+   使用此布局方式，应注意：
+    (1).row必须放在.container/.container-fluid内部
+    (2)一个.row默认会分为12个等宽的列
+    (3)一个.row中只能放置用于布局的.col-lg-*  .col-md-*  .col-sm-*  .col-xs-*列：
+    (4).col-lg-*设置只对lg的屏幕有效
+       .col-md-*设置只对md/lg的屏幕有效
+       .col-sm-*设置对sm/md/lg的屏幕有效
+       .col-xs-*设置对xs/sm/md/lg的屏幕都有效
+    (5)若某中屏幕下某个元素无需显示，可以使用
+       .hidden-lg  .hidden-md   .hidden-sm   .hidden-xs
+
+   【偏移】:  col-md-offset-4 ：表示该列向右移动4个md列的宽度。
+      偏移是一个用于更专业的布局的有用功能。它们可用来给列腾出更多的空间。
+      例如，.col-xs=* 类不支持偏移，但是它们可以简单地通过使用一个空的单元格来实现该效果。
+      为了在大屏幕显示器上使用偏移，请使用 .col-md-offset-* 类。这些类会把一个列的左外边距（margin）增加 * 列，其中 * 范围是从 1 到 11。
+      我们有 <div class="col-md-6">..</div>，我们将使用 .col-md-offset-3 class 来居中这个 div。
+
+
+   【排序】
+    列排序其实就是改变列的方向，就是改变左右浮动，并且设置浮动的距离。
+    col-md-push-*”和“col-md-pull-*” (其中星号代表移动的列组合数)。
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>    居左
+        <div class="col-md-8">.col-md-8</div>    居右
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-push-8">.col-md-4</div>    居右：向右移动８个列的距离
+        <div class="col-md-8 col-md-pull-4">.col-md-8</div>    居左: 向左移动4个列的距离
+      </div>
+    </div>
+
+
+  【嵌套】
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      我的里面嵌套了一个网格
+      <div class="row">
+        <div class="col-md-6">col-md-6</div>
+        <div class="col-md-6">col-md-6</div>
+      </div>
+    </div>
+    <div class="col-md-4">col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-8">
+      我的里面嵌套了一个网格
+      <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+      </div>
+    </div>
+  </div>
+</div>

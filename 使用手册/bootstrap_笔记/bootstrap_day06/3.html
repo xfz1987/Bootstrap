@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Bootstrap提供的jQuery插件——工具提示</h1>
+
+  <p>
+    我国古代的四大名著有：
+    <span data-toggle="tooltip" data-placement="right" title="四个和尚和一匹马的故事">西游记</span>、
+    <span data-toggle="tooltip" data-placement="top" title="105个男人和3个女人的故事">水浒传</span>、
+    <span data-toggle="tooltip" data-placement="bottom" title="爷们儿间的故事">三国志</span>、
+    <span data-toggle="tooltip" data-placement="left" title="一个男人和一堆女人的故事">红楼梦</span>
+  </p>
+
+  <h1>Bootstrap提供的jQuery插件——弹出框</h1>
+  <p>
+    我国古代的四大名著有：
+    <span data-toggle="popover" data-placement="auto" data-trigger="hover" title="西游记简介" data-content="西游记啊西游记西游记啊西游记西游记啊西游记">西游记</span>、
+    <span data-toggle="popover" data-placement="auto" data-trigger="hover" title="水浒传简介" data-content="水浒传啊水浒传啊水浒传啊水浒传啊水浒传啊水浒传">水浒传</span>、
+    <span data-toggle="popover" data-placement="auto" data-trigger="hover" title="三国志简介" data-content="三国志啊三国志啊三国志啊三国志">三国志</span>、
+    <span data-toggle="popover" data-placement="auto" data-trigger="hover" title="红楼梦简介" data-content="红楼梦啊红楼梦啊红楼梦啊红楼梦啊红楼梦啊红楼梦">红楼梦</span>
+  </p>
+
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  //添加Bootlint，检查Bootstrap使用方面存在的问题
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s);
+  })();
+</script>
+<script>
+  $('[data-toggle=tooltip]').tooltip();
+  $('[data-toggle=popover]').popover();
+</script>
+</body>
+</html>

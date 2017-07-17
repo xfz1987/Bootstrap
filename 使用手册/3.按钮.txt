@@ -1,0 +1,20 @@
+* 通常用于button/input/a元素
+
+.btn        设定按钮的基本样式，如背景色、边框、圆角、填充、active
+---------------
+.btn-default    灰色边框、白色背景、hover
+.btn-danger
+.btn-info
+.btn-primary
+.btn-success
+.btn-warning
+-----------------
+.btn-lg
+.btn-sm
+.btn-xs
+---------------- -
+.btn-block  块状按钮
+.btn-link   链接按钮
+-----------------
+.active
+.disabled

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title></title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container">
+  <h1>Bootstrap提供的jQuery插件——警告框</h1>
+
+  <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <p>您的浏览器禁用了JavaScript！本站的部分功能可能无法使用！</p>
+    <button type="button" class="btn btn-danger btn-xs" data-dismiss="alert">关闭</button>
+  </div>
+  <div class="alert alert-info">
+    <p>您的浏览器禁用了JavaScript！本站的部分功能可能无法使用！</p>
+  </div>
+  <div class="alert alert-success">
+    <p>您的浏览器禁用了JavaScript！本站的部分功能可能无法使用！</p>
+  </div>
+  <div class="alert alert-warning">
+    <p>您的浏览器禁用了JavaScript！本站的部分功能可能无法使用！</p>
+  </div>
+
+
+  <h1>Bootstrap提供的jQuery插件——标签页</h1>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab10" data-toggle="tab">十元套餐</a></li>
+    <li><a href="#tab20" data-toggle="tab">二十元套餐</a></li>
+    <li><a href="#tab30" data-toggle="tab">三十元套餐</a></li>
+  </ul>
+  <div class="panel tab-content">
+    <div id="tab10" class="tab-pane active panel-body text-justify">十元套餐包含：Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Fugit, harum, qui! Accusamus animi iste magni maxime ut. Assumenda consequuntur ducimus eos
+      laboriosam laudantium quia ratione unde vero? Fugiat, officia temporibus. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Amet assumenda atque distinctio eaque ipsa labore magnam magni, numquam omnis porro quibusdam
+      reprehenderit tempora tenetur? Amet architecto doloremque eum veniam voluptates.
+    </div>
+    <div id="tab20" class="tab-pane panel-body text-justify">二十元套餐包含：Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Accusamus, animi assumenda cupiditate deserunt, dolor doloremque esse fugit ipsum iusto, non porro quia
+      quisquam quod reiciendis repellat sapiente temporibus totam vitae.
+    </div>
+    <div id="tab30" class="tab-pane panel-body text-justify">三十元套餐包含：Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Debitis dolore maiores nam nostrum qui repudiandae ut. Architecto facere fugiat qui quia recusandae
+      repellendus repudiandae ullam. Aspernatur fugit in inventore optio? Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Adipisci debitis earum fuga hic ipsa nihil nostrum, odio quaerat sunt veritatis. Animi dolore
+      fugit ipsum labore nobis, nostrum nulla porro sequi!
+    </div>
+  </div>
+
+  <h1>Bootstrap提供的jQuery插件——折叠效果</h1>
+  <a class="btn btn-primary" href="#block1" data-toggle="collapse">显示第一个区块</a>
+  <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#block2">显示第二个区块</button>
+
+  <div id="block1" class="collapse well">BLOCK1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+    dolor impedit nisi repellat sint? Accusantium atque cupiditate dicta esse fuga impedit labore maxime molestiae non
+    numquam perspiciatis, quia quidem, quo! lorem
+  </div>
+  <div id="block2" class="collapse well">BLOCK2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at,
+    consequuntur deserunt, dignissimos esse excepturi fuga libero minus mollitia odit possimus praesentium quaerat,
+    quibusdam tempora voluptate. Et minus perferendis rerum!
+  </div>
+
+  <h2>折叠组合面板效果</h2>
+
+  <div class="panel-group" id="myAccordian">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href="#book1" data-parent="#myAccordian" data-toggle="collapse">西游记</a></h3>
+      </div>
+      <div id="book1" class="collapse in panel-collapse">
+        <div class="panel-body">
+          <p>西游记详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad corporis eius eos labore
+            magni, neque vitae voluptates? Architecto delectus dignissimos ea ex modi omnis unde. Aut doloremque quas
+            repellat!</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href="#book2" data-parent="#myAccordian" data-toggle="collapse">三国志</a></h3>
+      </div>
+      <div id="book2" class="collapse panel-collapse">
+        <div class="panel-body">
+          <p>三国志详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, at culpa, ducimus fugit hic id
+            illum incidunt nam non porro quod ratione sint ut velit? Dignissimos dolorem modi reprehenderit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href="#book3" data-parent="#myAccordian" data-toggle="collapse">水浒传</a></h3>
+      </div>
+      <div id="book3" class="collapse panel-collapse">
+        <div class="panel-body">
+          <p>水浒传详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa cum eos et optio quibusdam quod
+            repellendus temporibus! Adipisci aperiam doloribus eos eum libero maiores nulla odit quos sequi ut?</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href="#book4" data-parent="#myAccordian" data-toggle="collapse">红楼梦</a></h3>
+      </div>
+      <div id="book4" class="collapse panel-collapse">
+        <div class="panel-body">
+          <p>红楼梦详情：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deserunt fuga fugiat illum neque
+            perferendis quas tenetur ut. Alias corporis ex excepturi expedita inventore iusto nobis numquam quae qui
+            vitae!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  //添加Bootlint，检查Bootstrap使用方面存在的问题
+  (function () {
+    var s = document.createElement("script");
+    s.onload = function () {
+      bootlint.showLintReportForCurrentDocument([]);
+    };
+    s.src = "js/bootlint.js";
+    document.body.appendChild(s);
+  })();
+</script>
+<script>
+
+</script>
+</body>
+</html>
